@@ -15,16 +15,33 @@
     </style>
 </head>
 <body>
+    <h1>Task of the day</h1>
+
     <ul>
-        <?php foreach($person as $feature => $val) : ?>
-            <li><strong><?= $feature ?></strong> <?= $val ?></li>
+        <?php foreach($task as $heading => $value) : ?>
+            <li>
+                <strong><?= ucwords($heading); ?></strong> <?= $value; ?>
+            </li>
         <?php endforeach ?>
     </ul>
-    <p>Pushed to array:</p>
+
+
+
+    <h1>Task of the day - manualy</h1>
+
     <ul>
-        <?php foreach($numbers as $number) : ?>
-            <li><?= $number ?></li>
-        <?php endforeach ?>
+        <li>
+            <strong>Name: </strong><?= $task['title']; ?>
+        </li>
+        <li>
+            <strong>Due date: </strong><?= $task['due']; ?>
+        </li>
+        <li>
+            <strong>Person responsible: </strong><?= $task['assigned_to']; ?>
+        </li>
+        <li>
+        <strong>Status: </strong><?= $task['completed'] ? "Completed" : "Incomplete" ?>
+        </li>
     </ul>
 </body>
 </html>
