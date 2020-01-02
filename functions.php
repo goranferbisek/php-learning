@@ -5,3 +5,7 @@ function dd($data) {
     die(var_dump($data));
     echo '</pre>';
 }
+
+function isOldEnough($age) {
+    return $age < 21;
+}
