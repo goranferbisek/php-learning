@@ -20,5 +20,11 @@
             <li><strong><?= $feature ?></strong> <?= $val ?></li>
         <?php endforeach ?>
     </ul>
+    <p>Pushed do array:</p>
+    <ul>
+        <?php foreach($numbers as $number) : ?>
+            <li><?= $number ?></li>
+        <?php endforeach ?>
+    </ul>
 </body>
 </html>
