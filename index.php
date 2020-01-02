@@ -1,11 +1,13 @@
 <?php
 
-$task = [
-    'title' => 'buy bread',
-    'due' => 'today',
-    'assigned_to' => 'Goran',
-    'completed' => false
-];
+require 'functions.php';
+
+$animals = ['cat', 'dog'];
+
+dd($animals);
 
 
-require 'index.view.php';
+
+
+
+//require 'index.view.php';
