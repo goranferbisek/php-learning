@@ -20,7 +20,7 @@
             <li><strong><?= $feature ?></strong> <?= $val ?></li>
         <?php endforeach ?>
     </ul>
-    <p>Pushed do array:</p>
+    <p>Pushed to array:</p>
     <ul>
         <?php foreach($numbers as $number) : ?>
             <li><?= $number ?></li>

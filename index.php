@@ -22,4 +22,12 @@ echo '</pre>';
 //die('die'); //you can put var_dump inside this function
 
 
+$task = [
+    'title' => 'buy bread',
+    'due' => 'today',
+    'assigned_to' => 'Goran',
+    'completed' => false
+];
+
+
 require 'index.view.php';
