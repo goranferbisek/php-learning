@@ -1,9 +1,9 @@
 <?php
 
-$names = [
-    'Goran',
-    'Jana',
-    'Lara'
+$person = [
+    'age' => 31,
+    'hair' => 'brown',
+    'career' => 'web developer'
 ];
 
 
