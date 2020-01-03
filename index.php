@@ -1,36 +1,19 @@
 <?php
 
-//require 'functions.php';
+$host = '127.0.0.1';
+$port = 3333;
+$db   = 'mytodo';
+$user = 'root';
+$password = 'password';
+
+$dsn = "mysql:host=$host;dbname=$db;port=$port";
 
 
-class Task {
-    public $description;
-    public $completed = false;
-
-    public function __construct($description)
-    {
-        $this->description = $description;
-    }
-
-    public function complete()
-    {
-        $this->completed = true;
-    }
-
-    public function isComplete()
-    {
-        return $this->completed;
-    }
+try {
+    $pdo = new PDO($dsn, $user, $password);
+} catch (PDOException $e) {
+    die($e->getMessage());
 }
-
-
-$tasks = [
-    new Task('Buy some batteries'),
-    new Task('Take a shower'),
-    new Task('Learn programming')
-];
-
-$tasks[1]->complete();
 
 
 require 'index.view.php';
