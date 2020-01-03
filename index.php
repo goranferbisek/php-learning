@@ -1,5 +1,7 @@
 <?php
 
+require 'Task.php';
+
 $host = '127.0.0.1';
 $port = 3333;
 $db   = 'mytodo';
@@ -18,6 +20,6 @@ try {
 $statement = $pdo->prepare('SELECT * FROM todos');
 $statement->execute();
 
-$tasks = $statement->fetchAll(PDO::FETCH_OBJ);
+$tasks = $statement->fetchAll(PDO::FETCH_CLASS, 'Task');
 
 require 'index.view.php';
