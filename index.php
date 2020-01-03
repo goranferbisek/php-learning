@@ -15,5 +15,9 @@ try {
     die($e->getMessage());
 }
 
+$statement = $pdo->prepare('SELECT * FROM todos');
+$statement->execute();
+
+$tasks = $statement->fetchAll(PDO::FETCH_OBJ);
 
 require 'index.view.php';
