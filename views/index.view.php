@@ -15,6 +15,12 @@
     </style>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="about.php">About page</a></li>
+            <li><a href="contact.php">Contact page</a></li>
+        </ul>
+    </nav>
     <h1>Read tasks form database</h1>
     <ul>
         <?php foreach($tasks as $task) : ?>

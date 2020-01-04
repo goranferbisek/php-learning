@@ -1,9 +1,11 @@
 <?php
 
-$query = require 'bootstrap.php';
+$query = require 'core/bootstrap.php';
 
+$router = new Router;
 
-$tasks = $query->selectAll('todos');
+require 'routes.php';
 
+$uri = trim($_SERVER['REQUEST_URI'],'/');
 
-require 'index.view.php';
+require $router->direct($uri);
