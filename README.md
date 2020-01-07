@@ -7,6 +7,11 @@ This project uses Composer for autoloading classes. Install Composer and run:
 ```bash
 composer install
 ```
+## Adding new classes
+If you add new classes you have to rebuild the Composer classmap.
+```bash
+composer dump-autoload
+```
 
 # Database
 You can install a MySQL database localy or you can run a docker container.
