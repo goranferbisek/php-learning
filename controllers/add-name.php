@@ -1,7 +1,7 @@
 <?php
 
 $app['database']->insert('users', [
-    'name' => $_POST['name']
+    'name' => htmlspecialchars($_POST['name'])
 ]);
 
 //redirect to homepage
