@@ -18,11 +18,20 @@ class QueryBuilder
         return $statement->fetchAll(PDO::FETCH_CLASS);
     }
 
-    public function insertName($name)
+    public function insert($table, $parameters)
     {
-        $statement = $this->pdo->prepare(
-            "INSERT INTO names (name) VALUES ('{$name}')"
+        $query = sprintf(
+            'INSERT INTO %s (%s) VALUES (%s)',
+            $table,
+            implode(', ', array_keys($parameters)),
+            ':' . implode(', :', array_keys($parameters))
         );
-        return $statement->execute();
+
+        try {
+            $statement = $this->pdo->prepare($query);
+            return $statement->execute($parameters);
+        } catch (Exception $e) {
+            die('An error occurred when executing table insertion.');
+        }
     }
 }

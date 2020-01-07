@@ -1,10 +1,8 @@
 <?php
 
-$name = htmlspecialchars($_POST['name']);
+$app['database']->insert('users', [
+    'name' => $_POST['name']
+]);
 
-if ($app['database']->insertName($name)) {
-    echo "Name {$_POST['name']} succefuly inserted into the table";
-} else {
-    echo "Name failed to insert into the table.";
-}
-
+//redirect to homepage
+header('Location: /');
