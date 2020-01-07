@@ -2,6 +2,11 @@
 Learning PHP basics via Laracasts PHP Practitioner available here:
 https://laracasts.com/series/php-for-beginners
 
+# Composer
+This project uses Composer for autoloading classes. Install Composer and run:
+```bash
+composer install
+```
 
 # Database
 You can install a MySQL database localy or you can run a docker container.
