@@ -6,3 +6,7 @@ $router->get('contact', 'PagesController@contact');
 $router->get('about/culture', 'PagesController@culture');
 
 $router->post('names', 'controllers/add-name.php');
+
+
+$router->get('users', 'UsersController@index');
+$router->post('users', 'UsersController@store');
