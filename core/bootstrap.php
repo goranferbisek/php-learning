@@ -18,7 +18,7 @@ function view($name, $data = [])
 {
     extract($data); // reverse of the compact() function
 
-    return require "views/{$name}.view.php";
+    return require "app/views/{$name}.view.php";
 }
 
 function redirect($path) {
